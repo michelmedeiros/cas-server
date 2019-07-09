@@ -43,6 +43,7 @@ dependencies {
     compile "org.apereo.cas:cas-server-webapp${project.appServer}:${casServerVersion}"
     compile "org.apereo.cas:cas-server-support-jdbc:${casServerVersion}"
     runtime "org.apereo.cas:cas-server-support-jdbc-drivers:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-bootadmin-client:${casServerVersion}"
     testCompile "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"
 }
 
