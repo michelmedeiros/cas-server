@@ -13,6 +13,10 @@ buildscript {
     }
 }
 
+plugins {
+    id "io.freefair.lombok" version "3.7.4"
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
@@ -40,10 +44,31 @@ apply from: rootProject.file("gradle/springboot.gradle")
 apply from: rootProject.file("gradle/dockerjib.gradle")
 
 dependencies {
-    compile "org.apereo.cas:cas-server-webapp${project.appServer}:${casServerVersion}"
     compile "org.apereo.cas:cas-server-support-jdbc:${casServerVersion}"
     runtime "org.apereo.cas:cas-server-support-jdbc-drivers:${casServerVersion}"
     compile "org.apereo.cas:cas-server-support-bootadmin-client:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-core-webflow:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-core-webflow-api:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-webapp${project.appServer}:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-token-tickets:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-core-authentication-api:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-core-configuration-api:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-core-util:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-core-tickets-api:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-oidc:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-mongo-ticket-registry:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-pac4j-webflow:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-simple-mfa:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-sms-twilio:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-gauth:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-documentation-swagger:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-support-mongo-service-registry:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-core-web-api:${casServerVersion}"
+    compile "org.apereo.cas:cas-server-core-util-api:${casServerVersion}"
+    compile "org.pac4j:pac4j-config:3.7.0"
+    compile "org.pac4j:pac4j-oauth:3.7.0"
+    compile "org.projectlombok:lombok:1.18.8"
     testCompile "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"
 }
 
