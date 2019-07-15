@@ -1,0 +1,7 @@
+{
+  "@class" : "org.apereo.cas.services.RegexRegisteredService",
+  "serviceId" : "http://localhost:8080/openid/auth",
+  "name" : "openid",
+  "description" : "OpenID Sample Application",
+  "id" : 10
+}
